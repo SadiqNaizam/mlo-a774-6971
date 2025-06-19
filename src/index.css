@@ -4,89 +4,101 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Font Variables */
+    --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Light Mode Colors - Green Theme */
+    --background: 0 0% 100%;             /* White */
+    --foreground: 220 15% 25%;           /* Dark Gray for text (#333B47) */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;                   /* White */
+    --card-foreground: 220 15% 25%;       /* Dark Gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;                /* White */
+    --popover-foreground: 220 15% 25%;    /* Dark Gray */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 145 63% 35%;              /* Dark Lively Green for AA contrast (#2E8540) */
+    --primary-foreground: 0 0% 100%;      /* White */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 210 30% 96%;            /* Light Gray (#F0F4F8) */
+    --secondary-foreground: 145 50% 30%;  /* Darker Green for text on light gray (#2A7C4B) */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 30% 90%;                /* Muted Gray (#DCE4EC) */
+    --muted-foreground: 215 15% 50%;     /* Medium Gray for muted text (#707B8C) */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 145 60% 90%;               /* Light Green Accent (#D9F2E6) */
+    --accent-foreground: 145 63% 29%;    /* Dark Green for text on accent (#205C37) */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 72% 51%;            /* Clear Red (#E53E3E) */
+    --destructive-foreground: 0 0% 100%;  /* White */
 
-    --radius: 0.5rem;
+    --border: 210 20% 88%;               /* Light Gray Border (#DAE1E7) */
+    --input: 210 20% 92%;                /* Light Gray Input Background (#E6EBF0) */
+    --ring: 145 63% 35%;                 /* Primary Green for focus ring */
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.75rem;                   /* 12px */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Colors - Light Mode (aligned with main theme) */
+    --sidebar-background: 210 30% 90%;           /* Muted Gray */
+    --sidebar-foreground: 215 15% 50%;         /* Medium Gray */
+    --sidebar-primary: 145 63% 35%;             /* Primary Green */
+    --sidebar-primary-foreground: 0 0% 100%;     /* White */
+    --sidebar-accent: 145 60% 90%;              /* Light Green Accent */
+    --sidebar-accent-foreground: 145 63% 29%;   /* Dark Green on Accent */
+    --sidebar-border: 210 20% 88%;              /* Light Gray Border */
+    --sidebar-ring: 145 63% 35%;                /* Primary Green Ring */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode Colors - Green Theme */
+    --background: 220 20% 12%;           /* Dark Charcoal (#1A1D23) */
+    --foreground: 210 30% 95%;           /* Light Gray/Off-white (#EEF2F6) */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 16%;                 /* Slightly Lighter Dark (#22262E) */
+    --card-foreground: 210 30% 95%;       /* Light Gray/Off-white */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 16%;              /* Slightly Lighter Dark */
+    --popover-foreground: 210 30% 95%;    /* Light Gray/Off-white */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 145 55% 65%;              /* Lighter, Vibrant Green (#79D1A2) */
+    --primary-foreground: 145 63% 15%;    /* Very Dark Green for text (#113A22) */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 25%;            /* Darker Gray (#333B47) */
+    --secondary-foreground: 210 30% 85%;  /* Lighter Gray for text (#C9D4DF) */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 20%;                /* Darker Muted Gray (#2A2F3A) */
+    --muted-foreground: 215 15% 65%;     /* Medium-light Gray (#98A2B3) */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 145 50% 30%;               /* Darker Green Accent (#2A7C4B) */
+    --accent-foreground: 145 55% 75%;    /* Light Green for text on accent (#93DAB9) */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%;            /* Red for dark mode (#F25454) */
+    --destructive-foreground: 0 0% 100%;  /* White */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 30%;               /* Dark Gray Border (#3F4757) */
+    --input: 220 15% 22%;                /* Dark Gray Input Background (#2F3542) */
+    --ring: 145 55% 65%;                 /* Lighter Primary Green for ring */
+
+    /* Sidebar Colors - Dark Mode (aligned with main theme) */
+    --sidebar-background: 220 15% 20%;          /* Darker Muted Gray */
+    --sidebar-foreground: 215 15% 65%;        /* Medium-light Gray */
+    --sidebar-primary: 145 55% 65%;             /* Lighter Primary Green */
+    --sidebar-primary-foreground: 145 63% 15%;  /* Very Dark Green */
+    --sidebar-accent: 145 50% 30%;              /* Darker Green Accent */
+    --sidebar-accent-foreground: 145 55% 75%;   /* Light Green on Accent */
+    --sidebar-border: 220 15% 30%;              /* Dark Gray Border */
+    --sidebar-ring: 145 55% 65%;                /* Lighter Primary Green Ring */
+  }
+}
+
+@layer utilities {
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
   }
 }
 
@@ -96,6 +108,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body; /* Apply body font by default */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading; /* Apply heading font to heading elements */
   }
 }
