@@ -64,10 +64,20 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)',                     // 12px (0.75rem)
+				md: 'calc(var(--radius) - 4px)',        // 8px
+				sm: 'calc(var(--radius) - 6px)'         // 6px
 			},
+			// Added font families referencing CSS variables.
+            // The actual font stack is defined in index.css via --font-body and --font-heading
+            // and applied via @layer base and @layer utilities.
+            // This section can be used if you want to directly use Tailwind's font-sans, etc.
+            // For now, the existing CSS handles font application.
+            // If you want to override Tailwind's default `sans` font family, you could add:
+            // fontFamily: {
+            //   sans: ['var(--font-body)'], // Make sure --font-body has the full font stack string
+            //   heading: ['var(--font-heading)'], // Custom heading class if needed
+            // },
 			keyframes: {
 				'accordion-down': {
 					from: {
